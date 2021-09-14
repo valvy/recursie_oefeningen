@@ -7,7 +7,7 @@ def factorial(n: int) -> int:
     :param n: getal waarvan je faculteit uitrekent
     :return:
     """
-    pass
+    return 1 if n == 0 else factorial(n - 1) * n
 
 def testFactorial(getal, vermoeden):
     resultaat = factorial(getal) == vermoeden

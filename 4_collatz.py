@@ -10,7 +10,12 @@ def collatz(n: int) -> [int]:
         Geef een lijst terug met alle getallen van collatz
         Gebruik hiervoor recursie!
     """
-    pass
+    if n == 1:
+        return [n]
+    elif (n % 2 == 0):
+        return [n] + collatz(n // 2)
+    else:
+        return [n] + collatz(n * 3 + 1)
 
 def testCollatz(getal, vermoeden):
     resultaat = collatz(getal) == vermoeden

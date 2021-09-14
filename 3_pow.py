@@ -9,7 +9,8 @@ def pow(n: int, p: int) -> int:
     :param p:
     :return:
     """
-    pass
+    if p == 0: return 1
+    return n if n == 1 else n * pow(n, p - 1)
 
 
 def testPow(lh,rh):
